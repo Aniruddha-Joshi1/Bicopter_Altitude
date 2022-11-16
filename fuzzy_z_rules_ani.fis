@@ -13,6 +13,26 @@ DefuzzMethod='centroid'
 
 [Input1]
 Name='z_error'
+Range=[-10 10]
+NumMFs=5
+MF1='NL':'gbellmf',[2.5 2.5 -10]
+MF2='NS':'gbellmf',[2.5 2.5 -5]
+MF3='Z':'gbellmf',[2.5 2.5 0]
+MF4='PS':'gbellmf',[2.5 2.5 5]
+MF5='PL':'gbellmf',[2.5 2.5 10]
+
+[Input2]
+Name='z_error_dot'
+Range=[-5 5]
+NumMFs=5
+MF1='NL':'gbellmf',[1.25 2.5 -5]
+MF2='NS':'gbellmf',[1.25 2.5 -2.5]
+MF3='Z':'gbellmf',[1.25 2.5 0]
+MF4='PS':'gbellmf',[1.25 2.5 2.5]
+MF5='PL':'gbellmf',[1.25 2.5 5]
+
+[Output1]
+Name='Force'
 Range=[-50 50]
 NumMFs=5
 MF1='NL':'gbellmf',[12.5 2.5 -50]
@@ -20,26 +40,6 @@ MF2='NS':'gbellmf',[12.5 2.5 -25]
 MF3='Z':'gbellmf',[12.5 2.5 0]
 MF4='PS':'gbellmf',[12.5 2.5 25]
 MF5='PL':'gbellmf',[12.5 2.5 50]
-
-[Input2]
-Name='z_error_dot'
-Range=[-500 500]
-NumMFs=5
-MF1='NL':'gbellmf',[125 2.5 -500]
-MF2='NS':'gbellmf',[125 2.5 -250]
-MF3='Z':'gbellmf',[125 2.5 0]
-MF4='PS':'gbellmf',[125 2.5 250]
-MF5='PL':'gbellmf',[125 2.5 500]
-
-[Output1]
-Name='Force'
-Range=[-500 500]
-NumMFs=5
-MF1='NL':'gbellmf',[125 2.5 -500]
-MF2='NS':'gbellmf',[125 2.5 -250]
-MF3='Z':'gbellmf',[125 2.5 0]
-MF4='PS':'gbellmf',[125 2.5 250]
-MF5='PL':'gbellmf',[125 2.5 500]
 
 [Rules]
 1 1, 5 (1) : 1
